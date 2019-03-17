@@ -1,7 +1,7 @@
 package com.hogwarts.testcase;
 
-import com.hogwarts.Interface.Common;
-import com.hogwarts.Interface.CityWeather;
+import com.hogwarts.tools.JSONParaser;
+import com.hogwarts.common.CityWeather;
 import com.hogwarts.tools.ZTestReport;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -26,8 +26,8 @@ public class TestExec {
         httpResult = weather.getHttpRespone(cityCode);
         Reporter.log("请求地址: " + weather.geturl());
         Reporter.log("返回结果: " + httpResult);
-        weatherinfo = Common.getJsonValue(httpResult, "weatherinfo");
-        city = Common.getJsonValue(weatherinfo, "city");
+        weatherinfo = JSONParaser.getJsonValue(httpResult, "weatherinfo");
+        city = JSONParaser.getJsonValue(weatherinfo, "city");
         Reporter.log("用例结果: resultCode=>expected: " + exp_city + " ,actual: " + city);
         Assert.assertEquals(city, exp_city);
         throw new SkipException("");
@@ -41,8 +41,8 @@ public class TestExec {
         httpResult = weather.getHttpRespone(cityCode);
         Reporter.log("请求地址: " + weather.geturl());
         Reporter.log("返回结果: " + httpResult);
-        weatherinfo = Common.getJsonValue(httpResult, "weatherinfo");
-        city = Common.getJsonValue(weatherinfo, "city");
+        weatherinfo = JSONParaser.getJsonValue(httpResult, "weatherinfo");
+        city = JSONParaser.getJsonValue(weatherinfo, "city");
         Reporter.log("用例结果: resultCode=>expected: " + exp_city + " ,actual: " + city);
         Assert.assertEquals(city, exp_city);
     }
@@ -54,8 +54,8 @@ public class TestExec {
         httpResult = weather.getHttpRespone(cityCode);
         Reporter.log("请求地址: " + weather.geturl());
         Reporter.log("返回结果: " + httpResult);
-        weatherinfo = Common.getJsonValue(httpResult, "weatherinfo");
-        city = Common.getJsonValue(weatherinfo, "city");
+        weatherinfo = JSONParaser.getJsonValue(httpResult, "weatherinfo");
+        city = JSONParaser.getJsonValue(weatherinfo, "city");
         Reporter.log("用例结果: resultCode=>expected: " + exp_city + " ,actual: " + city);
         Assert.assertEquals(city, exp_city, "期望城市检测");
     }

@@ -1,4 +1,4 @@
-package com.hogwarts.Interface;
+package com.hogwarts.common;
 
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.conn.scheme.Scheme;

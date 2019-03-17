@@ -1,4 +1,4 @@
-package com.hogwarts.Interface;
+package com.hogwarts.common;
 
 import java.io.IOException;
 
@@ -10,7 +10,6 @@ public class CityWeather {
     }
 
     public String getHttpRespone(String cityCode) throws IOException {
-        String line = "";
         String httpResults = "";
         url = ("http://www.weather.com.cn/data/cityinfo/" + cityCode + ".html");
         httpResults = HttpClient.sendGet(url);
