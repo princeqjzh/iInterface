@@ -11,7 +11,7 @@ public class CityWeather {
 
     public String getHttpRespone(String cityCode) throws IOException {
         String httpResults = "";
-        url = ("http://www.weather.com.cn/data/cityinfo/" + cityCode + ".html");
+        url = "http://www.weather.com.cn/data/cityinfo/" + cityCode + ".html";
         httpResults = HttpClient.sendGet(url);
 
         return httpResults;
