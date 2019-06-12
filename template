@@ -7062,12 +7062,7 @@
                             <option value="">----------</option>
                         </select>
                         <div style="float: right">
-                            <label class="form-control">
-                                <span class="text-navy">Total: </span><span class="text-navy b-r" id="filterAll"></span><span> | </span>
-                                <span style="color: green">PASS: </span><span style="color: green" id="filterOk"></span><span> | </span>
-                                <span class="text-danger">FAIL: </span><span class="text-danger" id="filterFail"></span><span> | </span>
-                                <span class="text-warning">SKIP: </span><span class="text-warning" id="filterSkip"></span>
-                            </label>
+
                         </div>
                     </div>
                     <table class="table table-bordered">

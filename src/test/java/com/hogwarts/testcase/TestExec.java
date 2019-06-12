@@ -18,7 +18,7 @@ public class TestExec {
     public static String cityCode = "";
     CityWeather weather = new CityWeather();
 
-    @Test(groups = {"BaseCase"}, description = "验证深圳天气返回城市名称是否正确(模拟跳过)")
+    @Test(groups = {"BaseCase"}, description = "验证深圳天气返回城市名称是否正确")
     public void getShenZhen_Succ() throws Exception {
         exp_city = "深圳";
         cityCode = "101280601";
