@@ -30,7 +30,7 @@ public class TestExec {
         city = JSONParaser.getJsonValue(weatherinfo, "city");
         Reporter.log("用例结果: resultCode=>expected: " + exp_city + " ,actual: " + city);
         Assert.assertEquals(city, exp_city);
-//        throw new SkipException("");
+        throw new SkipException("");
     }
 
     @Test(groups = {"BaseCase"}, description = "验证北京天气返回城市名称是否正确")
@@ -62,7 +62,6 @@ public class TestExec {
 
     @DataProvider(name = "dataShangHai")
     public Object[][] dataProvider() {
-//        return new Object[][]{{"上海"}};
-        return new Object[][]{{"上海"}, {"上海"},{"上海"}};
+        return new Object[][]{{"上海"}, {"上海"},{"南京"}};
     }
 }
