@@ -9,21 +9,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
-    <plugins>
-        <plugin>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <version>${maven.failsafe.version}</version>
-            <executions>
-                <execution>
-                    <goals>
+         <plugins>
+           <plugin>
+             <artifactId>maven-failsafe-plugin</artifactId>
+               <version>3.0.0-M4</version>
+                 <executions>
+                   <execution>
+                     <goals>
                         <goal>integration-test</goal>
                         <goal>verify</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
+                     </goals>
+                   </execution>
+                </executions>
+             </plugin>
+          </plugins>
+    </build>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
