@@ -62,6 +62,6 @@ public class TestExec {
 
     @DataProvider(name = "dataShangHai")
     public Object[][] dataProvider() {
-        return new Object[][]{{"上海"}, {"上海"},{"北京"}};
+        return new Object[][]{{"上海"}, {"上海"},{"上海"}};
     }
 }
