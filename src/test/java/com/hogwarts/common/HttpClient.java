@@ -67,36 +67,4 @@ public class HttpClient {
         return result;
     }
 
-    public static String sendPost(String url, String data, String contentType) {
-        String response = null;
-        logger.info("Post url: " + url);
-        logger.info("Post request: " + data);
-        try {
-            CloseableHttpClient httpclient = null;
-            CloseableHttpResponse httpresponse = null;
-            try {
-                httpclient = HttpClients.createDefault();
-                HttpPost httppost = new HttpPost(url);
-                StringEntity stringentity = new StringEntity(data,
-                        ContentType.create(contentType, "UTF-8"));
-                httppost.setEntity(stringentity);
-                httpresponse = httpclient.execute(httppost);
-                response = EntityUtils
-                        .toString(httpresponse.getEntity());
-                logger.info("Post response: " + response);
-            } finally {
-                if (httpclient != null) {
-                    httpclient.close();
-                }
-                if (httpresponse != null) {
-                    httpresponse.close();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return response;
-    }
-
-
 }
