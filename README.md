@@ -6,7 +6,5 @@
 4. 输出测试报告
 
 Mock演示方法
-1. 将 src/test/resources/iInterface.properties 复制粘贴到 {user.home}
-2. 将 server_addr 设定为mock server的地址
-3. 运行接口测试程序，将会请求 mock server 运行得出结果
-4. mock server 代码在 py/weather.py， 使用python3运行
+1. mock server 代码在 py/weather.py， 使用python3运行
+2. 请求接口host需要相应改动
