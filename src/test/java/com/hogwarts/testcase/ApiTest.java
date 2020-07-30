@@ -13,10 +13,7 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.util.Properties;
 
-//import org.apache.log4j.Logger;
-
 public class ApiTest {
-    //    private Logger logger = Logger.getLogger(ApiTest.class);
     private String baseUrl = "";
     private String expectCityName = "";
 

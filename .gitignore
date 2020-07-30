@@ -24,3 +24,4 @@ app-test.log.*
 *.class
 report.html
 web_*
+.allure

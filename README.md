@@ -7,4 +7,4 @@
 
 Mock演示方法
 1. mock server 代码在 py/weather.py， 使用python3运行
-2. 请求接口host需要相应改动
+2. 将iInterface.properties复制/粘贴到 {user.home} 目录下, 配置 server_addr 参数
