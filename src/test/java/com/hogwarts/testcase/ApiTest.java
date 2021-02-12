@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.Properties;
 
 public class ApiTest {
@@ -55,8 +56,16 @@ public class ApiTest {
                 .given()
                 .config((RestAssured.config().sslConfig(new SSLConfig().relaxedHTTPSValidation())))
                 .get(fullUrl);
-        resp.print();
-        return resp.jsonPath().get("weatherinfo.city");
+        String cur_encoding = Charset.defaultCharset().name();
+        String city = null;
+        try {
+            String s_temp = new String(resp.getBody().asString().getBytes(cur_encoding), "UTF-8");
+            System.out.println(s_temp);
+            city = new String(((String) resp.jsonPath().get("weatherinfo.city")).getBytes(cur_encoding), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return city;
     }
 
     @BeforeEach
@@ -70,7 +79,6 @@ public class ApiTest {
     @AfterEach
     public void tearDown() {
         System.out.println(expectCityName + " Test Finished!");
-
     }
 
     @Test
